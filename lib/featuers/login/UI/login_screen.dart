@@ -11,33 +11,37 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: Scaffold(
-            appBar: appBarLogin(),
-            body: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 18),
-              child: Column(children: [
-                const Text(
-                  "Codeplayon",
-                  style: TextStyle(
-                      color: Colors.blue,
-                      fontSize: 30,
-                      fontWeight: FontWeight.w500),
-                ),
-                verticalSpace(15),
-                const TextFormFieldLogin(),
-                verticalSpace(15),
-                const Text(
-                  "Forgot password",
-                  style: TextStyle(
-                      color: Colors.blue,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w700),
-                ),
-                verticalSpace(15),
-                const TextButtonApp(),
-                verticalSpace(18),
-                const DontHaveAccountText()
-              ]),
-            )));
+      child: Scaffold(
+        appBar: appBarLogin(),
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 18),
+            child: Column(children: [
+              const Text(
+                "Codeplayon",
+                style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 30,
+                    fontWeight: FontWeight.w500),
+              ),
+              verticalSpace(15),
+              const TextFormFieldLogin(),
+              verticalSpace(15),
+              const Text(
+                "Forgot password",
+                style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 15,
+                    fontWeight: FontWeight.w700),
+              ),
+              verticalSpace(15),
+              const TextButtonApp(),
+              verticalSpace(18),
+              const DontHaveAccountText()
+            ]),
+          ),
+        ),
+      ),
+    );
   }
 }
